@@ -18,7 +18,7 @@
 
   function init() {
 
-    const MODEL_PATH = 'https://github.com/hamslice3000/3dDoge/blob/main/Mx_Mb_Export_Fixed_01.glb';
+    const MODEL_PATH = 'https://github.com/hamslice3000/3dDoge/blob/main/Mx_Mb_Export_Fixed_compress_02.glb';
     const canvas = document.querySelector('#c');
     const backgroundColor = 0xf1f1f1;
 
@@ -44,7 +44,7 @@
     camera.position.x = 0;
     camera.position.y = -3;
 
-    let stacy_txt = new THREE.TextureLoader().load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/stacy.jpg');
+    let stacy_txt = new THREE.TextureLoader().load('https://github.com/hamslice3000/3dDoge/blob/main/clr.png');
     stacy_txt.flipY = false;
 
     const stacy_mtl = new THREE.MeshPhongMaterial({
@@ -70,10 +70,10 @@
           o.material = stacy_mtl;
         }
         // Reference the neck and waist bones
-        if (o.isBone && o.name === 'mixamorigNeck') {
+        if (o.isBone && o.name === 'mixamorig:Neck') {
           neck = o;
         }
-        if (o.isBone && o.name === 'mixamorigSpine') {
+        if (o.isBone && o.name === 'mixamorig:Spine') {
           waist = o;
         }
       });
